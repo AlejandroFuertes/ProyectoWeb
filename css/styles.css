@@ -17,6 +17,40 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+/* GO TOP */
+
+.go-top{
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--red);
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 400ms;
+  z-index: 9999;
+}
+
+.go-top:hover{
+  border: 2px solid var(--white);
+  background: var(--red);
+}
+
+.go-top span{
+  font-size: 35px;
+  color: var(--black);
+}
+
+.go-top:hover span{
+  color: var(--white);
+}
+
+
 /* MENU DE NAVEGACION */
 #header {
   position: relative;
@@ -409,9 +443,11 @@ body {
 
 .footer .deg-footer{
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .footer .ejeZfooter{
@@ -421,9 +457,10 @@ body {
 }
 
 .footer .footer-content{
-  width: 90%;
   padding-top: 100px;
+  width: 90%;
   margin: auto;
+  padding-bottom: 100px;
 }
 
 .footer .footer-content .footer-title{
@@ -435,45 +472,47 @@ body {
 
 .footer .footer-content .footer-title h2{
   color: var(--white);
-  font-size: 30px;
-  font-weight: normal;
+  font-size: 35px;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   
 }
 
 .footer .footer-content .footer-title hr{
+  background: #fff;
   width: 80%;
+  height: 2px;
   margin: auto;
 }
 
-.footer .footer-content .formulario-content{
+.footer  .formulario-content{
   width: 60%;
-  background: #fff;
-  border-radius: 24px;
-  border: 2px solid var(--red);
   margin: 50px auto;
+  background: #fff;
   padding: 30px;
+  border-radius: 50px;
+  border: 1.5px solid var(--red);
 }
 
-.footer .footer-content .formulario-content #formulario{
+.footer .formulario-content #formulario{
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.footer .footer-content .formulario-content #formulario label{
+.footer .formulario-content #formulario label{
   text-align: center;
   color: var(--black);
-  font-size: 22px;
+  font-size: 20px;
   margin: 30px 0px 10px 0px;
 }
 
-.footer .footer-content .formulario-content #formulario input{
+.footer .formulario-content #formulario input{
   width: 90%;
   height: 35px;
   margin: auto;
-  border: 2px solid var(--red);
+  border: 1.5px solid var(--red);
   border-radius: 24px;
   outline: none;
   text-align: center;
@@ -481,11 +520,11 @@ body {
   color: var(--black);
 }
 
-.footer .footer-content .formulario-content #formulario textarea{
+.footer .formulario-content #formulario textarea{
   width: 90%;
   height: 200px;
   margin: auto;
-  border: 2px solid var(--red);
+  border: 1.5px solid var(--red);
   border-radius: 24px;
   outline: none;
   font-size: 15px;
@@ -493,14 +532,14 @@ body {
   padding: 20px;
 }
 
-.footer .footer-content .formulario-content #formulario .send{
+.footer .formulario-content #formulario .send{
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 40px 0px;
 }
 
-.footer .footer-content .formulario-content #formulario .send button{
+.footer .formulario-content #formulario .send button{
   width: 150px;
   height: 40px;
   background: var(--red);
@@ -515,9 +554,27 @@ body {
   transition: 0.5s;
 }
 
-.footer .footer-content .formulario-content #formulario .send button:hover{
-
+.footer .formulario-content #formulario .send button:hover{
   background: var(--black);
+}
+
+.footer .footer-text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 5px solid #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-content .footer-text p{
+  color: var(--white);
+  font-size: 20px;
 }
 
 
