@@ -22,7 +22,7 @@ body {
 .go-top{
   position: fixed;
   bottom: 100px;
-  right: 0;
+  right: -100%;
   width: 50px;
   height: 50px;
   border: 2px solid var(--red);
@@ -32,22 +32,43 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 400ms;
-  z-index: 9999;
+  transition: 0.5s;
+  z-index: 1000;
 }
 
 .go-top:hover{
   border: 2px solid var(--white);
   background: var(--red);
+  color: #fff;
 }
 
-.go-top span{
-  font-size: 35px;
+.go-top > span{
+  font-size: 30px;
   color: var(--black);
 }
 
 .go-top:hover span{
   color: var(--white);
+}
+
+/* SKEW */
+.skew-abajo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 10vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.skew-arriba{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 10vh 100vw 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  z-index: 10;
 }
 
 
@@ -101,7 +122,7 @@ body {
   color: var(--black);
   border-radius: 24px;
   font-size: 16px;
-  transition: 0.3s;  
+  transition: 0.5s;  
 }
 
 .menu .list-container .lists li a.activo{
@@ -585,12 +606,26 @@ body {
     position: absolute;
     top: 20px;
     right: 30px;
+    color: var(--black);
+    transition: 0.5s;
     font-size: 28px;
     cursor: pointer;
   } 
 
+  .btn-menu > .fa-bars:hover{
+    color: var(--red);
+  }
+
+  .btn-menu > .fa-times{
+    color: var(--red);
+  }
+
+  .menu .logo-box{
+    margin-left: 30px;
+  }
+
   .menu .list-container{
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: -100%;
     width: 100%;
@@ -605,32 +640,66 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-top: 5px solid var(--red);
+    border-top: 4px solid var(--red);
   }
 
-  .menu .list-container .lists li{
+  .menu .list-container ul li{
     width: 90%;
-    margin: 10px 0px;
-    border-bottom: 1px solid var(--red);
-    text-align: center;
+    border-bottom: 2px solid var(--black);
+    display: flex;
+    justify-content: center;
   }
 
-  .menu .list-container .list li a{
+  .menu .list-container ul li a{
+    font-size: 20px;
+    text-align: center;
+    padding: 12px 0px;
+  }
+
+  .menu .list-container ul li a.activo{
+    background: none;
+    color: var(--red);
+  }
+
+  .menu .list-container ul li a:hover{
+    background: none;
+    color: var(--red);
+  }
+}
+
+@media only screen and (max-width:773px){
+
+   /* IMG HEADER */
+  .img-header .welcome h1{
+    font-size: 40px;
+  }
+
+  .img-header .welcome > button{
+    width: 130px;
     font-size: 20px;
   }
+}
 
-  .menu .list-container .lists li a.activo{
-    background: none;
-    color: var(--red);
+@media only screen and (max-width:590px){
+
+  .img-header .welcome h1{
+    font-size: 40px;
   }
 
-  .menu .list-container .lists li a:hover{
-    background: none;
-    color: var(--red);
+  .img-header .welcome hr{
+    width: 100px;
+  }
+
+  .img-header .welcome p{
+    font-size: 17px;
+  }
+
+  .img-header .welcome > button{
+    width: 100px;
+    font-size: 17px;
   }
 
 }
-
 
 
 
